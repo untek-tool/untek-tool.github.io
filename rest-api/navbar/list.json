@@ -1,0 +1,15 @@
+{
+  "brandTitle": "",
+  "leftMenu": [
+    {
+      "name": "Главная страница",
+      "uri": "/",
+      "hidden": false
+    },
+    {
+      "name": "REST API Docs",
+      "uri": "/reader/rest-api-doc"
+    }
+  ],
+  "rightMenu": []
+}

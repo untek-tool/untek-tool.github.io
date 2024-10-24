@@ -1,0 +1,260 @@
+get:
+  tags:
+    - ReferenceBookDump
+  summary: Скачать дамп справочника
+  responses:
+    200:
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  description: 'Field description'
+                  type: integer
+                  example: 4
+                sortId:
+                  description: 'Field description'
+                  type: integer
+                  example: 4
+                name:
+                  description: 'Field description'
+                  type: string
+                  example: beige
+                title:
+                  description: 'Field description'
+                  type: object
+                  properties:
+                    ru:
+                      description: 'Field description'
+                      type: string
+                      example: бежевый
+                    kk:
+                      description: 'Field description'
+                      type: string
+                      example: сарғыш
+                    en:
+                      description: 'Field description'
+                      type: string
+                      example: beige
+                attributes:
+                  description: 'Field description'
+                  type: object
+                  properties:
+                    hex:
+                      description: 'Field description'
+                      type: string
+                      example: '#F5F5DC'
+            example:
+              -
+                id: 4
+                sortId: 4
+                name: beige
+                title:
+                  ru: бежевый
+                  kk: сарғыш
+                  en: beige
+                attributes:
+                  hex: '#F5F5DC'
+              -
+                id: 21
+                sortId: 21
+                name: black
+                title:
+                  ru: черный
+                  kk: қара
+                  en: black
+                attributes:
+                  hex: '#000000'
+              -
+                id: 18
+                sortId: 18
+                name: blue
+                title:
+                  ru: синий
+                  kk: көк
+                  en: blue
+                attributes:
+                  hex: '#0000FF'
+              -
+                id: 1
+                sortId: 1
+                name: bronze
+                title:
+                  ru: бронза
+                  kk: 'қола түсті'
+                  en: bronze
+                attributes:
+                  hex: '#CD7F32'
+              -
+                id: 12
+                sortId: 12
+                name: brown
+                title:
+                  ru: коричневый
+                  kk: қоңыр
+                  en: brown
+                attributes:
+                  hex: '#88540B'
+              -
+                id: 3
+                sortId: 3
+                name: chameleon
+                title:
+                  ru: хамелеон
+                  kk: хамелеон
+                  en: chameleon
+                attributes:
+                  hex: '#98B74F'
+              -
+                id: 2
+                sortId: 2
+                name: cherry
+                title:
+                  ru: вишня
+                  kk: шие
+                  en: cherry
+                attributes:
+                  hex: '#911E42'
+              -
+                id: 11
+                sortId: 11
+                name: golden
+                title:
+                  ru: золотистый
+                  kk: алтын
+                  en: golden
+                attributes:
+                  hex: '#F5BF03'
+              -
+                id: 10
+                sortId: 10
+                name: green
+                title:
+                  ru: зеленый
+                  kk: жасыл
+                  en: green
+                attributes:
+                  hex: '#008000'
+              -
+                id: 17
+                sortId: 17
+                name: grey
+                title:
+                  ru: серый
+                  kk: сұр
+                  en: grey
+                attributes:
+                  hex: '#808080'
+              -
+                id: 8
+                sortId: 8
+                name: light-blue
+                title:
+                  ru: голубой
+                  kk: көк
+                  en: 'light blue'
+                attributes:
+                  hex: '#42AAFF'
+              -
+                id: 19
+                sortId: 19
+                name: lilac
+                title:
+                  ru: сиреневый
+                  kk: 'ақшыл көк'
+                  en: lilac
+                attributes:
+                  hex: '#C8A2C8'
+              -
+                id: 14
+                sortId: 14
+                name: orange
+                title:
+                  ru: оранжевый
+                  kk: сарғылт
+                  en: orange
+                attributes:
+                  hex: '#FF8000'
+              -
+                id: 15
+                sortId: 15
+                name: pink
+                title:
+                  ru: розовый
+                  kk: қызғылт
+                  en: pink
+                attributes:
+                  hex: '#FFC0CB'
+              -
+                id: 13
+                sortId: 13
+                name: red
+                title:
+                  ru: красный
+                  kk: қызыл
+                  en: red
+                attributes:
+                  hex: '#FF0000'
+              -
+                id: 16
+                sortId: 16
+                name: silver
+                title:
+                  ru: серебристый
+                  kk: күміс
+                  en: silver
+                attributes:
+                  hex: '#C0C0C0'
+              -
+                id: 6
+                sortId: 6
+                name: turquoise
+                title:
+                  ru: бирюзовый
+                  kk: көгілдір
+                  en: turquoise
+                attributes:
+                  hex: '#40E0D0'
+              -
+                id: 7
+                sortId: 7
+                name: vinous
+                title:
+                  ru: бордовый
+                  kk: күрең
+                  en: vinous
+                attributes:
+                  hex: '#9B2D30'
+              -
+                id: 20
+                sortId: 20
+                name: violet
+                title:
+                  ru: фиолетовый
+                  kk: күлгін
+                  en: violet
+                attributes:
+                  hex: '#8000FF'
+              -
+                id: 5
+                sortId: 5
+                name: white
+                title:
+                  ru: белый
+                  kk: ақ
+                  en: white
+                attributes:
+                  hex: '#FFFFFF'
+              -
+                id: 9
+                sortId: 9
+                name: yellow
+                title:
+                  ru: жёлтый
+                  kk: сары
+                  en: yellow
+                attributes:
+                  hex: '#FFFF00'

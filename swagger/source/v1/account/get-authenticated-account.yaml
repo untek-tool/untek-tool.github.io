@@ -1,0 +1,46 @@
+get:
+  tags:
+    - Account
+  summary: Получить информацию о текущем пользователе
+  responses:
+    200:
+      content:
+        application/json:
+          schema:
+            description: 'Пользователь'
+            type: object
+            properties:
+              id:
+                description: 'ID'
+                type: integer
+                example: 1
+              roles:
+                description: 'Роли'
+                type: array
+                items:
+                  type: string
+                  example: ROLE_ADMIN
+              username:
+                description: 'Field description'
+                type: string
+                example: __admin__
+              enabled:
+                description: 'Активен ли аккаунт'
+                type: boolean
+                example: true
+              avatar:
+                description: 'Field description'
+                type: 'NULL'
+                example: null
+              phone:
+                description: 'Field description'
+                type: string
+                example: '+77990000001'
+            example:
+              id: 1
+              roles:
+                - ROLE_ADMIN
+              username: __admin__
+              enabled: true
+              avatar: null
+              phone: '+77990000001'

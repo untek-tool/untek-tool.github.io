@@ -1,0 +1,23 @@
+post:
+  tags:
+    - RestorePassword
+  summary: Отправка номера для восстановления пароля
+  responses:
+    204:
+      content:
+        application/json:
+          schema:
+            type: array
+            example: {  }
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            phone:
+              description: 'Номер телефона'
+              type: string
+              example: '+77990000001'
+          example:
+            phone: '+77990000001'

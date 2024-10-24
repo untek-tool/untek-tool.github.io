@@ -1,0 +1,18 @@
+{
+  "leftMenu": [
+    {
+      "name": "Copyright 2024"
+    }
+  ],
+  "rightMenu": [
+    {
+      "name": "Обратная связь",
+      "uri": "/contacts",
+      "hidden": true
+    },
+    {
+      "name": "Главная страница",
+      "uri": "/"
+    }
+  ]
+}

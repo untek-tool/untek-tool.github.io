@@ -1,0 +1,31 @@
+post:
+  tags:
+    - Authentication
+  summary: Отправка номера для аутентификации/регистрации
+  description: Если в системе нет аккаунта по данному номеру телефона, то на него отправляется СМС с кодом активации,
+    который будет необходим для подтверждения регистрации пользователя в системе
+  responses:
+    200:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              hasPhone:
+                description: 'Field description'
+                type: boolean
+                example: false
+            example:
+              hasPhone: false
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            phone:
+              description: 'Номер телефона'
+              type: string
+              example: '+77991000001'
+          example:
+            phone: '+77991000001'

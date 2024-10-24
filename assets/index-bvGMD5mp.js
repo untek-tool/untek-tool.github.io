@@ -1,0 +1,1 @@
+import{r as s,d as o,j as t}from"./index-DxGLTUF6.js";import{A as c}from"./aboutContactRender-OISfmk8M.js";function u(){const[a,n]=s.useState([]);return s.useEffect(()=>{o.getJson("contacts/list.json").then(e=>{n(e.contacts)})},[]),t.jsxs(t.Fragment,{children:[t.jsx("h1",{children:"Контакты"}),t.jsx(c,{contacts:a??[]})]})}export{u as default};

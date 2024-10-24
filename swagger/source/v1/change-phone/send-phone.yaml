@@ -1,0 +1,29 @@
+post:
+  tags:
+    - ChangePhone
+  summary: Отправить СМС с кодом подтверждения
+  responses:
+    200:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              hasPhone:
+                description: 'Есть ли юзер с таким телефоном, true означает, что телефон недоступен'
+                type: boolean
+                example: false
+            example:
+              hasPhone: false
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            phone:
+              description: 'Телефон для смены'
+              type: string
+              example: '+77991127290'
+          example:
+            phone: '+77991127290'

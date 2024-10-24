@@ -1,0 +1,44 @@
+post:
+  tags:
+    - Authentication
+  summary: Регистрация аккаунта
+  description: 'На этом шаге производится регистрация аккаунта в системе'
+  responses:
+    200:
+      content:
+        application/json:
+          schema:
+            type: array
+            example: {  }
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            phone:
+              description: 'Номер телефона'
+              type: string
+              example: '+77991000001'
+            activationCode:
+              description: 'Код активации'
+              type: integer
+              example: 123456
+            password:
+              description: 'Пароль'
+              type: string
+              example: Wwwqqq111
+            passwordRepeat:
+              description: 'Подтверждение пароля'
+              type: string
+              example: Wwwqqq111
+            name:
+              description: 'Имя пользователя'
+              type: string
+              example: Vasya
+          example:
+            phone: '+77991000001'
+            activationCode: 123456
+            password: Wwwqqq111
+            passwordRepeat: Wwwqqq111
+            name: Vasya

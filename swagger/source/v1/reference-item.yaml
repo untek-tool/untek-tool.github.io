@@ -1,0 +1,276 @@
+get:
+  tags:
+    - ReferenceItem
+  summary: Получить список элементов
+  responses:
+    200:
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  description: 'Field description'
+                  type: integer
+                  example: 1
+                bookId:
+                  description: 'Field description'
+                  type: integer
+                  example: 1
+                parentId:
+                  description: 'Field description'
+                  type: 'NULL'
+                  example: null
+                sortId:
+                  description: 'Field description'
+                  type: integer
+                  example: 1
+                name:
+                  description: 'Field description'
+                  type: string
+                  example: bronze
+                title:
+                  description: 'Field description'
+                  type: object
+                  properties:
+                    ru:
+                      description: 'Field description'
+                      type: string
+                      example: бронза
+                    kk:
+                      description: 'Field description'
+                      type: string
+                      example: 'қола түсті'
+                    en:
+                      description: 'Field description'
+                      type: string
+                      example: bronze
+                attributes:
+                  description: 'Field description'
+                  type: object
+                  properties:
+                    hex:
+                      description: 'Field description'
+                      type: string
+                      example: '#CD7F32'
+                updatedAt:
+                  description: 'Field description'
+                  type: string
+                  example: '2024-03-06T17:20:43+00:00'
+            example:
+              -
+                id: 1
+                bookId: 1
+                parentId: null
+                sortId: 1
+                name: bronze
+                title:
+                  ru: бронза
+                  kk: 'қола түсті'
+                  en: bronze
+                attributes:
+                  hex: '#CD7F32'
+                updatedAt: '2024-03-06T17:20:43+00:00'
+              -
+                id: 2
+                bookId: 1
+                parentId: null
+                sortId: 2
+                name: cherry
+                title:
+                  ru: вишня
+                  kk: шие
+                  en: cherry
+                attributes:
+                  hex: '#911E42'
+                updatedAt: '2024-03-06T17:20:43+00:00'
+              -
+                id: 3
+                bookId: 1
+                parentId: null
+                sortId: 3
+                name: chameleon
+                title:
+                  ru: хамелеон
+                  kk: хамелеон
+                  en: chameleon
+                attributes:
+                  hex: '#98B74F'
+                updatedAt: '2024-03-06T17:20:43+00:00'
+              -
+                id: 4
+                bookId: 1
+                parentId: null
+                sortId: 4
+                name: beige
+                title:
+                  ru: бежевый
+                  kk: сарғыш
+                  en: beige
+                attributes:
+                  hex: '#F5F5DC'
+                updatedAt: '2024-03-06T17:20:43+00:00'
+              -
+                id: 5
+                bookId: 1
+                parentId: null
+                sortId: 5
+                name: white
+                title:
+                  ru: белый
+                  kk: ақ
+                  en: white
+                attributes:
+                  hex: '#FFFFFF'
+                updatedAt: '2024-03-06T17:20:43+00:00'
+              -
+                id: 6
+                bookId: 1
+                parentId: null
+                sortId: 6
+                name: turquoise
+                title:
+                  ru: бирюзовый
+                  kk: көгілдір
+                  en: turquoise
+                attributes:
+                  hex: '#40E0D0'
+                updatedAt: '2024-03-06T17:20:43+00:00'
+              -
+                id: 7
+                bookId: 1
+                parentId: null
+                sortId: 7
+                name: vinous
+                title:
+                  ru: бордовый
+                  kk: күрең
+                  en: vinous
+                attributes:
+                  hex: '#9B2D30'
+                updatedAt: '2024-03-06T17:20:43+00:00'
+              -
+                id: 8
+                bookId: 1
+                parentId: null
+                sortId: 8
+                name: light-blue
+                title:
+                  ru: голубой
+                  kk: көк
+                  en: 'light blue'
+                attributes:
+                  hex: '#42AAFF'
+                updatedAt: '2024-03-06T17:20:43+00:00'
+              -
+                id: 9
+                bookId: 1
+                parentId: null
+                sortId: 9
+                name: yellow
+                title:
+                  ru: жёлтый
+                  kk: сары
+                  en: yellow
+                attributes:
+                  hex: '#FFFF00'
+                updatedAt: '2024-03-06T17:20:43+00:00'
+              -
+                id: 10
+                bookId: 1
+                parentId: null
+                sortId: 10
+                name: green
+                title:
+                  ru: зеленый
+                  kk: жасыл
+                  en: green
+                attributes:
+                  hex: '#008000'
+                updatedAt: '2024-03-06T17:20:43+00:00'
+post:
+  tags:
+    - ReferenceItem
+  summary: Создать новый элемент
+  responses:
+    201:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              id:
+                description: 'Field description'
+                type: integer
+                example: 5380
+              bookId:
+                description: 'Field description'
+                type: integer
+                example: 1
+              parentId:
+                description: 'Field description'
+                type: integer
+                example: 1
+              sortId:
+                description: 'Field description'
+                type: integer
+                example: 100
+              name:
+                description: 'Field description'
+                type: string
+                example: qwerty333
+              title:
+                description: 'Field description'
+                type: array
+                items:
+                  type: string
+                  example: qwerty333
+              attributes:
+                description: 'Field description'
+                type: array
+              updatedAt:
+                description: 'Field description'
+                type: 'NULL'
+                example: null
+            example:
+              id: 5380
+              bookId: 1
+              parentId: 1
+              sortId: 100
+              name: qwerty333
+              title:
+                - qwerty333
+              attributes: {  }
+              updatedAt: null
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            bookId:
+              description: 'Field description'
+              type: integer
+              example: 1
+            parentId:
+              description: 'Field description'
+              type: integer
+              example: 1
+            name:
+              description: 'Field description'
+              type: string
+              example: qwerty333
+            title:
+              description: 'Field description'
+              type: array
+              items:
+                type: string
+                example: qwerty333
+          example:
+            bookId: 1
+            parentId: 1
+            name: qwerty333
+            title:
+              - qwerty333

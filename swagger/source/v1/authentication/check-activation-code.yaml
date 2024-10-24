@@ -1,0 +1,29 @@
+post:
+  tags:
+    - Authentication
+  summary: Проверка кода активации
+  description: 'Этот запрос не производит никаких изменений состояния на backend, служит лишь для проверки кода активации до перехода на экран регистрации'
+  responses:
+    200:
+      content:
+        application/json:
+          schema:
+            type: array
+            example: {  }
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            phone:
+              description: 'Номер телефона'
+              type: string
+              example: '+77991000001'
+            activationCode:
+              description: 'Код активации'
+              type: integer
+              example: 123456
+          example:
+            phone: '+77991000001'
+            activationCode: 123456

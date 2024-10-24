@@ -1,0 +1,113 @@
+get:
+  tags:
+    - ReferenceBookSync
+  summary: Получить только обновленные справочники в зависимости от времени обновления на клиенте
+  description: Отправляем дату последнего обновления локальных справочников, затем смотрим какие справочники пришли в ответе.
+    Если пришел пустой ответ, то обновлять ничего не нужно.
+    Если пришел список справочников, то делаем их перебор,
+    в каждой итерации скачиваем каждый справочник по ссылке, указанной в атрибуте `dumpFileUrl`, сохраняем данные на клиенте.
+    После завершения синхронизации локально сохраняем текущее время обновления справочников для дальнейшей синхронизации.
+  responses:
+    200:
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  description: 'Field description'
+                  type: integer
+                  example: 1
+                parentId:
+                  description: 'Field description'
+                  type: 'NULL'
+                  example: null
+                name:
+                  description: 'Field description'
+                  type: string
+                  example: color
+                title:
+                  description: 'Field description'
+                  type: object
+                  properties:
+                    ru:
+                      description: 'Field description'
+                      type: string
+                      example: Цвета
+                    en:
+                      description: 'Field description'
+                      type: string
+                      example: Color
+                statusId:
+                  description: 'Field description'
+                  type: integer
+                  example: 200
+                updatedAt:
+                  description: 'Field description'
+                  type: string
+                  example: '2024-03-06T17:20:43+00:00'
+                dumpFileUrl:
+                  description: 'Field description'
+                  type: string
+                  example: 'http://0.0.0.0:8080/rest-api/v1/reference-dump/color'
+            example:
+              -
+                id: 1
+                parentId: null
+                name: color
+                title:
+                  ru: Цвета
+                  en: Color
+                statusId: 200
+                updatedAt: '2024-03-06T17:20:43+00:00'
+                dumpFileUrl: 'http://0.0.0.0:8080/rest-api/v1/reference-dump/color'
+              -
+                id: 2
+                parentId: null
+                name: country
+                title:
+                  ru: Страны
+                  en: Country
+                statusId: 200
+                updatedAt: '2024-03-06T17:21:43+00:00'
+                dumpFileUrl: 'http://0.0.0.0:8080/rest-api/v1/reference-dump/country'
+              -
+                id: 3
+                parentId: null
+                name: region
+                title:
+                  ru: Регионы
+                  en: Region
+                statusId: 200
+                updatedAt: '2024-03-06T17:22:43+00:00'
+                dumpFileUrl: 'http://0.0.0.0:8080/rest-api/v1/reference-dump/region'
+              -
+                id: 4
+                parentId: null
+                name: model-of-car
+                title:
+                  ru: 'Модели машин'
+                  en: 'Model of car'
+                statusId: 200
+                updatedAt: '2024-03-06T17:23:43+00:00'
+                dumpFileUrl: 'http://0.0.0.0:8080/rest-api/v1/reference-dump/model-of-car'
+              -
+                id: 5
+                parentId: null
+                name: brand-of-car
+                title:
+                  ru: 'Марки машин'
+                  en: 'Brand of car'
+                statusId: 200
+                updatedAt: '2024-03-06T17:24:43+00:00'
+                dumpFileUrl: 'http://0.0.0.0:8080/rest-api/v1/reference-dump/brand-of-car'
+  parameters:
+    -
+      schema:
+        type: string
+      in: query
+      name: updatedAt
+      description: '"updatedAt" field description'
+      example: '2024-03-06T17:20:43+00:00'

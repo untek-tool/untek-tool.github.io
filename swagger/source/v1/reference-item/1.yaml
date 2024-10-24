@@ -1,0 +1,136 @@
+get:
+  tags:
+    - ReferenceItem
+  summary: Получить элемент по ID
+  responses:
+    200:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              id:
+                description: 'Field description'
+                type: integer
+                example: 1
+              bookId:
+                description: 'Field description'
+                type: integer
+                example: 1
+              parentId:
+                description: 'Field description'
+                type: 'NULL'
+                example: null
+              sortId:
+                description: 'Field description'
+                type: integer
+                example: 1
+              name:
+                description: 'Field description'
+                type: string
+                example: bronze
+              title:
+                description: 'Field description'
+                type: object
+                properties:
+                  ru:
+                    description: 'Field description'
+                    type: string
+                    example: бронза
+                  kk:
+                    description: 'Field description'
+                    type: string
+                    example: 'қола түсті'
+                  en:
+                    description: 'Field description'
+                    type: string
+                    example: bronze
+              attributes:
+                description: 'Field description'
+                type: object
+                properties:
+                  hex:
+                    description: 'Field description'
+                    type: string
+                    example: '#CD7F32'
+              updatedAt:
+                description: 'Field description'
+                type: string
+                example: '2024-03-06T17:20:43+00:00'
+            example:
+              id: 1
+              bookId: 1
+              parentId: null
+              sortId: 1
+              name: bronze
+              title:
+                ru: бронза
+                kk: 'қола түсті'
+                en: bronze
+              attributes:
+                hex: '#CD7F32'
+              updatedAt: '2024-03-06T17:20:43+00:00'
+put:
+  tags:
+    - ReferenceItem
+  summary: Изменить элемент по ID
+  responses:
+    204:
+      content:
+        application/json:
+          schema:
+            type: array
+            example: {  }
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            id:
+              description: 'Field description'
+              type: integer
+              example: 1
+            name:
+              description: 'Field description'
+              type: string
+              example: qwerty
+            parentId:
+              description: 'Field description'
+              type: integer
+              example: 1
+            title:
+              description: 'Field description'
+              type: object
+              properties:
+                ru:
+                  description: 'Field description'
+                  type: string
+                  example: 'Элемент 1 (updated)'
+                en:
+                  description: 'Field description'
+                  type: string
+                  example: 'Item 1 (updated)'
+            bookId:
+              description: 'Field description'
+              type: integer
+              example: 1
+          example:
+            id: 1
+            name: qwerty
+            parentId: 1
+            title:
+              ru: 'Элемент 1 (updated)'
+              en: 'Item 1 (updated)'
+            bookId: 1
+delete:
+  tags:
+    - ReferenceItem
+  summary: Удалить элемент по ID
+  responses:
+    204:
+      content:
+        application/json:
+          schema:
+            type: array
+            example: {  }

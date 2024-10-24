@@ -1,0 +1,77 @@
+openapi: 3.0.3
+info:
+  title: 'Example REST API service'
+  description: |
+    Используется протокол REST API
+  version: 1.0.0
+servers:
+  -
+    url: /rest-api
+    description: 'This server'
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      name: Authorization
+      bearerFormat: JWT
+paths:
+  /v1/authentication/send-phone:
+    $ref: ./v1/authentication/send-phone.yaml
+  /v1/authentication/check-activation-code:
+    $ref: ./v1/authentication/check-activation-code.yaml
+  /v1/registration-account:
+    $ref: ./v1/authentication/registration-account.yaml
+  /v1/generate-token-by-password:
+    $ref: ./v1/account/generate-token-by-password.yaml
+  /v1/get-authenticated-account:
+    $ref: ./v1/account/get-authenticated-account.yaml
+  /v1/restore-password/send-phone:
+    $ref: ./v1/restore-password/send-phone.yaml
+  /v1/restore-password/check-activation-code:
+    $ref: ./v1/restore-password/check-activation-code.yaml
+  /v1/restore-password/save-password:
+    $ref: ./v1/restore-password/save-password.yaml
+  /v1/authenticated-account:
+    $ref: ./v1/authenticated-account.yaml
+  /v1/change-phone/send-phone:
+    $ref: ./v1/change-phone/send-phone.yaml
+  /v1/change-phone/save-phone:
+    $ref: ./v1/change-phone/save-phone.yaml
+  /v1/reference-book:
+    $ref: ./v1/reference-book.yaml
+  /v1/reference-book/1:
+    $ref: ./v1/reference-book/1.yaml
+  /v1/reference-book-sync:
+    $ref: ./v1/reference-book-sync.yaml
+  /v1/reference-item:
+    $ref: ./v1/reference-item.yaml
+  /v1/reference-item/1:
+    $ref: ./v1/reference-item/1.yaml
+  /v1/reference-dump/color:
+    $ref: ./v1/reference-dump/color.yaml
+tags:
+  -
+    name: RestorePassword
+    description: 'Восстановление пароля'
+  -
+    name: Authentication
+    description: 'Аутентификация/регистрация пользователя'
+  -
+    name: Account
+    description: 'Аккаунт пользователя'
+  -
+    name: ChangePhone
+    description: 'Изменение номера телефона'
+  -
+    name: ReferenceBook
+    description: 'Справочник. Книги'
+  -
+    name: ReferenceItem
+    description: 'Справочник. Элементы'
+  -
+    name: ReferenceBookSync
+    description: 'Справочник. Сводная информация'
+  -
+    name: ReferenceBookDump
+    description: 'Справочник. Дампы справочников'

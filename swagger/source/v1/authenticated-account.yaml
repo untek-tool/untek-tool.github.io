@@ -1,0 +1,40 @@
+put:
+  tags:
+    - Account
+  security:
+    - bearerAuth: []
+  summary: Изменить свои данные
+  responses:
+    204:
+      content:
+        application/json:
+          schema:
+            type: array
+            example: {  }
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            name:
+              description: 'Новый юзернейм'
+              type: string
+              example: 'test name'
+            avatar:
+              description: 'Айди загруженного аватара'
+              type: string
+              example: 1
+          example:
+            name: 'test name'
+delete:
+  tags:
+    - Account
+  summary: Удалить свой аккаунт
+  responses:
+    204:
+      content:
+        application/json:
+          schema:
+            type: array
+            example: {  }

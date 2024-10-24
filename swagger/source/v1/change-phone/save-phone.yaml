@@ -1,0 +1,28 @@
+post:
+  tags:
+    - ChangePhone
+  summary: Подтвердить смену номера
+  responses:
+    204:
+      content:
+        application/json:
+          schema:
+            type: array
+            example: {  }
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            phone:
+              description: 'Телефон для смены'
+              type: string
+              example: '+77991775569'
+            activationCode:
+              description: 'Код из смс'
+              type: string
+              example: '174115'
+          example:
+            phone: '+77991775569'
+            activationCode: '174115'
