@@ -23,7 +23,7 @@ get:
               username:
                 description: 'Field description'
                 type: string
-                example: __admin__
+                example: Gordon Mcconnell
               enabled:
                 description: 'Активен ли аккаунт'
                 type: boolean
@@ -40,7 +40,7 @@ get:
               id: 1
               roles:
                 - ROLE_ADMIN
-              username: __admin__
+              username: Gordon Mcconnell
               enabled: true
               avatar: null
               phone: '+77990000001'
